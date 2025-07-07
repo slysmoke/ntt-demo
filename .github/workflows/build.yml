@@ -39,6 +39,8 @@ jobs:
         path: dist/ntt-demo-${{ matrix.os }}*
 
   release:
+    permissions:
+      contents: write
     name: Create Release
     runs-on: ubuntu-latest
     needs: build
